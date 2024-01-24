@@ -25,8 +25,9 @@ make
 ./push_swap 3 1 2 2147483647 -2147483648
 ```
 
-### Visualization
-The following visualization was not part of the project and just serves the purpose of illustrating the algorithm . It was being created using ![push_swap visualizer from o-reo](https://github.com/o-reo/push_swap_visualizer).
+### Algorithm
+The basic idea of my algorithm is to always push that element of `a` which requires the minimum rotation in `a` and `b` whilst keeping `b` in descending order.
+The following visualization was not part of the project and just serves the purpose of illustrating the algorithm. It was being created using ![push_swap visualizer from o-reo](https://github.com/o-reo/push_swap_visualizer).
 
 Sorting 100 random numbers:
 
