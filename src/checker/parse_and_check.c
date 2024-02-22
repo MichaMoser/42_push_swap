@@ -6,13 +6,13 @@
 /*   By: mmoser <mmoser@student.codam.nl>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 12:03:27 by mmoser            #+#    #+#             */
-/*   Updated: 2024/01/19 16:20:06 by mmoser           ###   ########.fr       */
+/*   Updated: 2024/02/22 09:44:56 by mmoser           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	parse_instructions(t_list **instruction_stack, t_list **a_head)
+void	parse_instructions(t_list **instruction_stack)
 {
 	char	*buffer;
 	t_list	*new;
@@ -26,10 +26,10 @@ void	parse_instructions(t_list **instruction_stack, t_list **a_head)
 		instruction = instruction_to_num(buffer);
 		free(buffer);
 		if (instruction == false)
-			free_and_exit(instruction_stack, a_head, NULL, EXIT_FAILURE);
+			free_and_exit(instruction_stack, NULL, NULL, EXIT_FAILURE);
 		new = ft_lstnew(instruction);
 		if (!new)
-			free_and_exit(instruction_stack, a_head, NULL, EXIT_FAILURE);
+			free_and_exit(instruction_stack, NULL, NULL, EXIT_FAILURE);
 		ft_lstadd_back(instruction_stack, new);
 	}
 }

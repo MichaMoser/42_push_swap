@@ -34,7 +34,7 @@ typedef enum e_ops
 int		main(int argc, char *argv[]);
 
 // parse_and_check.c
-void	parse_instructions(t_list **instruction_stack, t_list **a_head);
+void	parse_instructions(t_list **instruction_stack);
 size_t	instruction_to_num(char *buffer);
 void	apply_instructions(t_list *instructions, t_list **a_head, t_list **b_head);
 

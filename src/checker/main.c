@@ -6,7 +6,7 @@
 /*   By: mmoser <mmoser@student.codam.nl>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 12:03:06 by mmoser            #+#    #+#             */
-/*   Updated: 2024/01/18 12:03:08 by mmoser           ###   ########.fr       */
+/*   Updated: 2024/02/22 09:44:31 by mmoser           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	main(int argc, char *argv[])
 	a_head = NULL;
 	b_head = NULL;
 	instructions = NULL;
+	parse_instructions(&instructions);
 	parse_input (argc - 1, argv, &a_head);
-	parse_instructions(&instructions, &a_head);
 	apply_instructions(instructions, &a_head, &b_head);
 	if (check_order(a_head) == 0 && b_head == NULL)
 		ft_printf("OK\n");
