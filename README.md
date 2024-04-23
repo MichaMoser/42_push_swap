@@ -18,7 +18,7 @@ Given an unsorted stack `a` containing unique integer values provided as command
 ### Utilization
 
 ```
-git clone git@github.com:michmos/42_push_swap.git && cd 42_push_swap
+git clone https://github.com/michmos/42_push_swap.git && cd 42_push_swap
 make
 ```
 ```
